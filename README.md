@@ -94,3 +94,8 @@ CodeAlpha Internship
 Task: Language Translation Tool
 
 Domain: Artificial Intelligence and Natural Language Processing
+
+
+## Screenshot
+
+![AI Language Translator](screenshot.png)

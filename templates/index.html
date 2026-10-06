@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Language Translator</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <h1>🌍 AI Language Translator</h1>
+
+    <!-- Language Selection -->
+
+    <div class="language-section">
+
+        <div class="language-box">
+
+            <label for="source">Source Language</label>
+
+            <select id="source">
+
+                <option value="en">English</option>
+                <option value="de">German</option>
+                <option value="id">Indonesian</option>
+                <option value="fr">French</option>
+                <option value="hi">Hindi</option>
+                <option value="ja">Japanese</option>
+                <option value="ko">Korean</option>
+                <option value="zh-Hans">Chinese</option>
+                <option value="ar">Arabic</option>
+                <option value="bn">Bengali</option>
+                <option value="bg">Bulgarian</option>
+                <option value="az">Azerbaijani</option>
+                <option value="ca">Catalan</option>
+                <option value="cs">Czech</option>
+                <option value="da">Danish</option>
+                <option value="nl">Dutch</option>
+                <option value="el">Greek</option>
+                <option value="he">Hebrew</option>
+                <option value="hu">Hungarian</option>
+                <option value="it">Italian</option>
+                <option value="lt">Lithuanian</option>
+                <option value="lv">Latvian</option>
+                <option value="eo">Esperanto</option>
+                <option value="et">Estonian</option>
+                <option value="fi">Finnish</option>
+                <option value="ga">Irish</option>
+                <option value="gl">Galician</option>
+                <option value="eu">Basque</option>
+                <option value="ky">Kyrgyz</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Swap Button -->
+
+        <button
+            type="button"
+            id="swapButton"
+            onclick="swapLanguages()">
+
+            ⇄
+
+        </button>
+
+
+        <div class="language-box">
+
+            <label for="target">Target Language</label>
+
+            <select id="target">
+
+                <option value="de">German</option>
+                <option value="en">English</option>
+                <option value="id">Indonesian</option>
+                <option value="fr">French</option>
+                <option value="hi">Hindi</option>
+                <option value="ja">Japanese</option>
+                <option value="ko">Korean</option>
+                <option value="zh-Hans">Chinese</option>
+                <option value="ar">Arabic</option>
+                <option value="bn">Bengali</option>
+                <option value="bg">Bulgarian</option>
+                <option value="az">Azerbaijani</option>
+                <option value="ca">Catalan</option>
+                <option value="cs">Czech</option>
+                <option value="da">Danish</option>
+                <option value="nl">Dutch</option>
+                <option value="el">Greek</option>
+                <option value="he">Hebrew</option>
+                <option value="hu">Hungarian</option>
+                <option value="it">Italian</option>
+                <option value="lt">Lithuanian</option>
+                <option value="lv">Latvian</option>
+                <option value="eo">Esperanto</option>
+                <option value="et">Estonian</option>
+                <option value="fi">Finnish</option>
+                <option value="ga">Irish</option>
+                <option value="gl">Galician</option>
+                <option value="eu">Basque</option>
+                <option value="ky">Kyrgyz</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <!-- Input -->
+
+    <label for="text">Enter Text</label>
+
+    <textarea
+        id="text"
+        maxlength="500"
+        placeholder="Enter text to translate..."></textarea>
+
+
+    <p id="counter">0 / 500 characters</p>
+
+
+    <!-- Translate Button -->
+
+    <button
+        id="translateButton"
+        onclick="translateText()">
+
+        Translate
+
+    </button>
+
+
+    <!-- Result -->
+
+    <div class="result-section">
+
+        <h2>Translation</h2>
+
+        <div id="result">
+
+            Translation will appear here.
+
+        </div>
+
+
+        <div class="result-buttons">
+
+            <button
+                class="secondary-button"
+                onclick="copyTranslation()">
+
+                📋 Copy
+
+            </button>
+
+
+            <button
+                class="secondary-button"
+                onclick="speakTranslation()">
+
+                🔊 Speak
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
